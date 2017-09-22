@@ -10,7 +10,7 @@
 		"url": "github.com/kevva"
 	},
 	"engines": {
-		"node": ">=4"
+		"node": ">=6"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -32,10 +32,10 @@
 		"origin"
 	],
 	"devDependencies": {
-		"ava": "^0.20.0",
+		"ava": "*",
 		"got": "^7.1.0",
 		"micro": "^9.0.0",
 		"test-listen": "^1.0.2",
-		"xo": "^0.18.2"
+		"xo": "*"
 	}
 }
