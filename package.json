@@ -1,0 +1,41 @@
+{
+	"name": "micro-access",
+	"version": "0.0.0",
+	"description": "Easy CORS handling for micro",
+	"license": "MIT",
+	"repository": "kevva/micro-access",
+	"author": {
+		"name": "Kevin Mårtensson",
+		"email": "kevinmartensson@gmail.com",
+		"url": "github.com/kevva"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"allow",
+		"cors",
+		"headers",
+		"http",
+		"https",
+		"methods",
+		"maxage",
+		"micro",
+		"microservice",
+		"middleware",
+		"origin"
+	],
+	"devDependencies": {
+		"ava": "^0.20.0",
+		"got": "^7.1.0",
+		"micro": "^9.0.0",
+		"test-listen": "^1.0.2",
+		"xo": "^0.18.2"
+	}
+}
