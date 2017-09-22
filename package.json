@@ -1,6 +1,6 @@
 {
 	"name": "micro-access",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Easy CORS handling for micro",
 	"license": "MIT",
 	"repository": "kevva/micro-access",
