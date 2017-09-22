@@ -10,7 +10,10 @@ module.exports = opts => fn => (req, res) => {
 
 	if (allowCredentials) {
 		const val = typeof allowCredentials === 'string' ? Number(allowCredentials) : allowCredentials;
-		res.setHeader('access-control-allow-credentials', Boolean(val));
+
+		if (val) {
+			res.setHeader('access-control-allow-credentials', Boolean(val));
+		}
 	}
 
 	if (allowHeaders) {

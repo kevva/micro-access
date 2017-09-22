@@ -21,16 +21,27 @@ const envMacro = async (t, {env, header, value}, expected) => {
 	process.env[env] = ENV;
 };
 
-test('set allowCredentials', macro, {
+test.serial('set allowCredentials', macro, {
 	allowCredentials: true,
 	header: 'access-control-allow-credentials'
 }, 'true');
 
-test('set allowCredentials using env variable', envMacro, {
+test.serial('omit setting allowCredentials if value is false', macro, {
+	allowCredentials: false,
+	header: 'access-control-allow-credentials'
+}, undefined);
+
+test.serial('set allowCredentials using env variable', envMacro, {
 	env: 'ACCESS_ALLOW_CREDENTIALS',
 	value: '1',
 	header: 'access-control-allow-credentials'
 }, 'true');
+
+test.serial('omit setting allowCredentials if value is 0', envMacro, {
+	env: 'ACCESS_ALLOW_CREDENTIALS',
+	value: '0',
+	header: 'access-control-allow-credentials'
+}, undefined);
 
 test('set allowHeaders', macro, {
 	allowHeaders: ['Foo', 'Bar'],
