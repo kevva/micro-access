@@ -31,6 +31,9 @@
 		"middleware",
 		"origin"
 	],
+	"dependencies": {
+		"control-access": "^0.1.0"
+	},
 	"devDependencies": {
 		"ava": "*",
 		"got": "^7.1.0",

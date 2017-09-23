@@ -57,6 +57,15 @@ test('set allowMethods', [macro, envMacro], {
 	}
 }, 'GET,POST');
 
+test('set allowOrigin', [macro, envMacro], {
+	opts: {allowOrigin: '*'},
+	header: 'access-control-allow-origin',
+	env: {
+		key: 'ACCESS_ALLOW_ORIGIN',
+		value: '*'
+	}
+}, '*');
+
 test('set maxAge', [macro, envMacro], {
 	opts: {maxAge: 1024},
 	header: 'access-control-max-age',
@@ -65,12 +74,3 @@ test('set maxAge', [macro, envMacro], {
 		value: '1024'
 	}
 }, '1024');
-
-test('set origin', [macro, envMacro], {
-	opts: {origin: '*'},
-	header: 'access-control-allow-origin',
-	env: {
-		key: 'ACCESS_ORIGIN',
-		value: '*'
-	}
-}, '*');
