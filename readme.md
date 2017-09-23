@@ -40,6 +40,11 @@ Type: `Function`
 The request handler to wrap.
 
 
+## Related
+
+* [control-access](https://github.com/kevva/control-access) - Easy CORS handling
+
+
 ## License
 
 MIT © [Kevin Mårtensson](https://github.com/kevva)
